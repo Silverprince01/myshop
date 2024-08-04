@@ -1,112 +1,239 @@
 import Image from "next/image";
+import Link from "next/link";
+import Shoe1 from "@/public/assets/images/shoe1.png";
+import Shoe2 from "@/public/assets/images/shoe2.png";
+import Shoe3 from "@/public/assets/images/Shoe3.png";
+import Shoe4 from "@/public/assets/images/Shoe4.png";
+import Shoe5 from "@/public/assets/images/Shoe5.png";
+import Shoe6 from "@/public/assets/images/Shoe6.png";
+import Shoe7 from "@/public/assets/images/Shoe7.png";
+import FlashSales from "@/public/assets/images/flashSales.png";
+import DarkLogo from "@/public/assets/icons/darkLogo.png";
+import Call from "@/public/assets/icons/call.png";
+import House from "@/public/assets/icons/house.png";
+import Global from "@/public/assets/icons/global.png";
 
 export default function Home() {
+  const shoeArray = [
+    {
+      id: 1,
+      price: "#20,000",
+      title: "Sneakers",
+      img: Shoe1,
+    },
+    {
+      id: 2,
+      price: "#20,000",
+      title: "Nike",
+      img: Shoe2,
+    },
+    {
+      id: 3,
+      price: "#20,000",
+      title: "Fila",
+      img: Shoe3,
+    },
+    {
+      id: 4,
+      price: "#20,000",
+      title: "Sneakers",
+      img: Shoe4,
+    },
+    {
+      id: 5,
+      price: "#20,000",
+      title: "TimberLand",
+      img: Shoe5,
+    },
+    {
+      id: 6,
+      price: "#20,000",
+      title: "Louis Vuitton",
+      img: Shoe6,
+    },
+    {
+      id: 7,
+      price: "#20,000",
+      title: "Sneakers",
+      img: Shoe7,
+    },
+    {
+      id: 8,
+      price: "#20,000",
+      title: "Puma",
+      img: Shoe1,
+    },
+    {
+      id: 9,
+      price: "#20,000",
+      title: "Sneakers",
+      img: Shoe2,
+    },
+    {
+      id: 10,
+      price: "#20,000",
+      title: "Sneakers",
+      img: Shoe3,
+    },
+    {
+      id: 11,
+      price: "#20,000",
+      title: "Sneakers",
+      img: Shoe4,
+    },
+    {
+      id: 12,
+      price: "#20,000",
+      title: "Sneakers",
+      img: Shoe5,
+    },
+  ];
+  const womenShoeArray = [
+    {
+      id: 1,
+      price: "#20,000",
+      title: "Sneakers",
+      img: Shoe1,
+    },
+    {
+      id: 2,
+      price: "#20,000",
+      title: "Nike",
+      img: Shoe2,
+    },
+    {
+      id: 3,
+      price: "#20,000",
+      title: "Fila",
+      img: Shoe3,
+    },
+    {
+      id: 4,
+      price: "#20,000",
+      title: "Sneakers",
+      img: Shoe4,
+    },
+  ];
+  const menShoeArray = [
+    {
+      id: 1,
+      price: "#20,000",
+      title: "Sneakers",
+      img: Shoe1,
+    },
+    {
+      id: 2,
+      price: "#20,000",
+      title: "Nike",
+      img: Shoe2,
+    },
+    {
+      id: 3,
+      price: "#20,000",
+      title: "Fila",
+      img: Shoe3,
+    },
+    {
+      id: 4,
+      price: "#20,000",
+      title: "Sneakers",
+      img: Shoe4,
+    },
+  ];
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main className="py-10">
+      <div className="flex justify-between  w-full">
+        <div className="flex flex-col">
+          <Image src={Shoe1} alt="Shoe" />
+          <Image src={Shoe2} alt="Shoe" />
+        </div>
+        <div className="bg-[#42E8FFCC] p-4 flex justify-center items-center flex-col w-[65%] relative">
+          <h1 className="text-6xl text-center ">
+            Let your feet do the talking....
+          </h1>
+
+          <div className="flex items-center gap-1 absolute bottom-0">
+            <Image src={DarkLogo} width={220} height={50} alt="Dark Logo" />
+          </div>
+        </div>
+        <div className="flex justify-between flex-col ">
+          <div className="bg-[#CAA1FF] rounded-lg p-4">
+            <div className="flex items-center gap-2 mb-3">
+              <Image src={Call} alt="Call" width={20} height={20} />
+              <p>+234123456789</p>
+            </div>
+            <div className="flex items-center gap-2 mb-3">
+              <Image src={House} alt="House" width={20} height={20} />
+              <p>Become a Vendor</p>
+            </div>
+            <div className="flex items-center gap-2 mb-3">
+              <Image src={Global} alt="Global" width={20} height={20} />
+              <p>Global Best Seller</p>
+            </div>
+          </div>
+          <div className="">
+            <Image src={FlashSales} alt="Flash Sales" />
+          </div>
         </div>
       </div>
 
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      <div className="bg-[#42E8FF] my-6 w-full">
+        <div className=" grid grid-cols-4 p-4">
+          {shoeArray.map((shoes: any) => {
+            const { id, title, price, img } = shoes;
+            return (
+              <div className=" p-2" key={id}>
+                <Image src={img} alt="Shoes" width={150} height={150} />
+                <div className="">
+                  <p className="text-base font-semibold">{title}</p>
+                  <p className="text-sm">{price}</p>
+                </div>
+              </div>
+            );
+          })}
+        </div>
       </div>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      <div className="bg-[#CAA1FF] my-6 w-full p-4">
+        <div className="flex justify-between items-center">
+          <h3>Female</h3>
+          <p>See all</p>
+        </div>
+        <div className=" grid grid-cols-4 gap-5 ">
+          {womenShoeArray.map((shoes: any) => {
+            const { id, title, price, img } = shoes;
+            return (
+              <div className=" p-2" key={id}>
+                <Image src={img} alt="Shoes" width={150} height={150} />
+                <div className="">
+                  <p className="text-base font-semibold">{title}</p>
+                  <p className="text-sm">{price}</p>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+      <div className="bg-[#E2F6FF] my-6 w-full p-4">
+      <div className="flex justify-between items-center">
+          <h3>Male</h3>
+          <p>See all</p>
+        </div>
+        <div className=" grid grid-cols-4 ">
+          {menShoeArray.map((shoes: any) => {
+            const { id, title, price, img } = shoes;
+            return (
+              <Link href={"/single"} className=" p-2" key={id} >
+                <Image src={img} alt="Shoes" width={150} height={150} />
+                <div className="">
+                  <p className="text-base font-semibold">{title}</p>
+                  <p className="text-sm">{price}</p>
+                </div>
+              </Link>
+            );
+          })}
+        </div>
       </div>
     </main>
   );

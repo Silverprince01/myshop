@@ -1,4 +1,8 @@
+// "use client";
 import type { Metadata } from "next";
+import { NextUIProviders } from "@/app/Providers/NextUIProviders";
+import Header from "./components/header";
+import Footer from "./components/footer";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
@@ -16,7 +20,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={` px-4 py-5 bg-white h-full`}>
+        <NextUIProviders>
+          <Header />
+          {children}
+          <Footer />
+        </NextUIProviders>
+      </body>
     </html>
   );
 }
